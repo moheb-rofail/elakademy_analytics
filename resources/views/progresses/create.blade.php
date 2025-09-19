@@ -10,29 +10,28 @@
 
         @csrf
         <label for="course_id">الكورس</label>
-        <select name="course_id" id="course_id">
-            <option value="">إختر كورس</option>
+        <input type="text" name="course_id" placeholder="ابحث..." list="courses">
+        <datalist  id="courses">
             @foreach ($courses as $course)
                 <option value="{{$course->ID}}">{{$course->post_title}}</option>
             @endforeach
-        </select>
-
+        </datalist>
 
         <label for="instructor_id">المدرب</label>
-        <select name="instructor_id" id="instructor_id">
-            <option value="">إختر مدربا</option>
+        <input type="text" name="instructor_id" placeholder="ابحث..." list="instructors">
+        <datalist id="instructors">
             @foreach ($users as $user)
                 <option value="{{$user->ID}}">{{$user->display_name}}</option>
             @endforeach
-        </select>
+        </datalist>
 
         <label for="student_id">الطالب</label>
-        <select name="student_id" id="student_id">
-            <option value="">إختر طالبا</option>
+        <input type="text" name="student_id" placeholder="ابحث..." list="students">
+        <datalist id="students">
             @foreach ($users as $user)
                 <option value="{{$user->ID}}">{{$user->display_name}}</option>
             @endforeach
-        </select>
+        </datalist>
 
         <label for="progress">التقدم</label>
         <input type="number" id="progress" name="progress" step="1">
@@ -41,6 +40,12 @@
         <textarea type="text" id="notes" name="notes"></textarea>
 
         <input type="submit" id="submit" name="add" value="إضافة">
+
+        @if($errors->any())
+            @foreach($errors->all() as $error)
+                {{$error}}
+            @endforeach
+        @endif
     </form>
 
 </x-layout>
