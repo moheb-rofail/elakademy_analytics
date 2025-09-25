@@ -1,4 +1,4 @@
-<x-layout>
+<x-app-layout>
     <div class="overflow-x-auto">
         <table class="min-w-full divide-y-2 divide-gray-200">
             <tr class="*:text-gray-900 *:first:font-medium">
@@ -47,4 +47,4 @@
 
         </table>
     </div>
-</x-layout>
+</x-app-layout>

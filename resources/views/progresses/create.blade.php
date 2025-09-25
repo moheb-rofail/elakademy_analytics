@@ -1,4 +1,4 @@
-<x-layout>
+<x-app-layout>
 
     <form action="{{route('progresses.store')}}" method="post" class="form">
 
@@ -48,4 +48,5 @@
         @endif
     </form>
 
-</x-layout>
+    
+</x-app-layout>

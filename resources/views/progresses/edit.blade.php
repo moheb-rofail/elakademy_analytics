@@ -1,4 +1,4 @@
-<x-layout>
+<x-app-layout>
 
     <form action="{{route('progresses.update', $progress->id)}}" method="post" class="form">
 
@@ -50,4 +50,4 @@
         <input type="submit" id="submit" name="update" value="تعديل">
     </form>
 
-</x-layout>
+</x-app-layout>

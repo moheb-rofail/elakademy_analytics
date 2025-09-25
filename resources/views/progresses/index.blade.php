@@ -1,4 +1,4 @@
-<x-layout>
+<x-app-layout>
 
     <div class="overflow-x-auto">
         @if (session('success'))
@@ -35,4 +35,4 @@
         </table>
     </div>
 
-</x-layout>
+</x-app-layout>
